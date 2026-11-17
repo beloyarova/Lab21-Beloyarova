@@ -121,3 +121,22 @@ else
 Console.WriteLine(">>> Итоговый список дел <<< ");
 Console.WriteLine($"Количество задач: {tasks.Count}");
 PrintTasks(tasks);
+
+// Самостоятельное задание
+
+int CountTask(List<string> tasks, string title)
+{
+    int count = 0;
+    for (int i = 0; i < tasks.Count; i++)
+    {
+        if (tasks[i] == title)
+        {
+            count++;
+        }
+    }
+    return count;
+}
+Console.Write("Название для подсчёта: ");
+string text4 = Console.ReadLine();
+int count1 = CountTask(tasks, text4);
+Console.WriteLine($"Совпадений для {text4}: {count1}");
